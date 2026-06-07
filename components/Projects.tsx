@@ -343,6 +343,17 @@ export default function Projects() {
         </>
       )}
 
+      {/* ── Closing note ── */}
+      <div className="mt-16 pt-10 border-t border-stone-100 text-center">
+        <p className="font-serif italic text-2xl sm:text-3xl text-stone-400 leading-relaxed">
+          & honestly? I&apos;ve built so much more —
+        </p>
+        <p className="font-serif italic text-2xl sm:text-3xl text-stone-900 leading-relaxed mt-1">
+          side experiments, weekend hacks, tools I made just because I wanted to.
+        </p>
+        <p className="text-sm text-stone-400 mt-4">This is just what made the cut.</p>
+      </div>
+
     </section>
   );
 }

@@ -33,7 +33,7 @@ export default function Hero() {
 
       <p className="text-lg sm:text-2xl font-semibold text-stone-900 mt-8 mb-2">Fun fact about me!</p>
       <p className="text-sm sm:text-base text-stone-500 leading-relaxed max-w-xl">
-        I genuinely can't stop building things. I founded booKi while still in college. Won 1st at AtliQ Hackathon with EarliSense and placed 3rd at TinkerThon out of 400+ teams with PLANit. I build websites, AI tools, and full products for real clients. Backend, frontend, AI, infra — I cover everything end to end because I actually enjoy all of it.
+        I genuinely can't stop building things. I founded booKi while still in college. Won 1st at AtliQ Hackathon with EarliSense and placed 3rd at TinkerThon out of 400+ teams with PLANit. I build websites, AI tools, and full products for real clients. Backend, frontend, AI, infra. I cover everything end to end because I actually enjoy all of it.
       </p>
 
       <div className="flex flex-wrap gap-4 mt-6">

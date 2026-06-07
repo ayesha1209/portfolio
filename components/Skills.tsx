@@ -42,6 +42,41 @@ const row2: Skill[] = [
   { icon: SiDocker,       label: "Docker",        color: "#2496ED" },
 ];
 
+const staticSkills = [
+  {
+    label: "Languages",
+    items: ["Python", "JavaScript", "TypeScript", "Java", "SQL", "C++"],
+  },
+  {
+    label: "Frontend & Mobile",
+    items: ["React", "Next.js", "React Native", "Tailwind CSS"],
+  },
+  {
+    label: "Backend",
+    items: ["FastAPI", "Node.js", "REST APIs", "Celery", "Valkey", "SSE", "WebSockets"],
+  },
+  {
+    label: "Databases",
+    items: ["PostgreSQL", "MySQL", "MongoDB", "Firebase", "Oracle", "SQL Server", "pgvector", "FAISS"],
+  },
+  {
+    label: "Database Skills",
+    items: ["Schema Design", "RBAC", "Query Optimisation", "Indexing", "Stored Procedures"],
+  },
+  {
+    label: "AI / ML",
+    items: ["OpenAI", "Gemini", "Amazon Bedrock", "AssemblyAI", "RAG", "BERT", "wav2vec2", "MediaPipe", "XGBoost", "Scikit-learn", "OpenCV", "DeepEval", "NLP"],
+  },
+  {
+    label: "Cloud & Infra",
+    items: ["AWS S3", "AWS SQS", "Docker", "Azure", "Vercel", "Git"],
+  },
+  {
+    label: "Setup & Delivery",
+    items: ["DNS Config", "Domain Setup", "Email Setup", "Microsoft 365", "Google Workspace", "SSL", "Hosting"],
+  },
+];
+
 function SkillPill({ skill }: { skill: Skill }) {
   const Icon = skill.icon;
   return (
@@ -78,9 +113,31 @@ export default function Skills() {
         </h2>
       </div>
 
+      {/* Scrolling visual */}
       <div className="space-y-3">
         <Row items={row1} direction="left" />
         <Row items={row2} direction="right" />
+      </div>
+
+      {/* Static written grid */}
+      <div className="max-w-5xl mx-auto px-6 mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {staticSkills.map((group) => (
+          <div key={group.label}>
+            <p className="text-xs font-semibold tracking-widest text-stone-400 uppercase mb-3">
+              {group.label}
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {group.items.map((item) => (
+                <span
+                  key={item}
+                  className="text-sm font-medium text-stone-800 bg-stone-100 px-3 py-1"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

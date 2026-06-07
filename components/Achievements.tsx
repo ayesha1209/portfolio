@@ -17,7 +17,7 @@ const highlights = [
     title: "EarliSense",
     label: "AtliQ Hackathon",
     detail:
-      "AI-powered call intelligence platform that listens, understands tone and sentiment in real time, and routes only genuinely interested customers to human agents — turning random calls into meaningful conversations and saving thousands of hours.",
+      "AI-powered call intelligence platform that listens, understands tone and sentiment in real time, and routes only genuinely interested customers to human agents, turning random calls into meaningful conversations and saving thousands of hours.",
     year: "2025",
   },
 ];

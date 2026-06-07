@@ -2,7 +2,7 @@
 
 export default function ProfilePhoto() {
   return (
-    <span className="inline-block w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-amber-200 bg-stone-100 mb-1 align-bottom shrink-0">
+    <span className="inline-block w-14 h-14 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-amber-200 bg-stone-100 mb-1 align-bottom shrink-0">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/photo.jpg"

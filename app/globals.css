@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background-color: #ffffff;
+  color: #1c1917;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-serif {
+  font-family: "DM Serif Display", Georgia, serif;
+}
+
+::selection {
+  background-color: #1c1917;
+  color: #ffffff;
+}
+
+/* ── Marquee / infinite scroll ── */
+@keyframes marquee-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes marquee-right {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.marquee-left  { animation: marquee-left  28s linear infinite; }
+.marquee-right { animation: marquee-right 32s linear infinite; }
+
+.marquee-track { display: flex; width: max-content; }

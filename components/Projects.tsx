@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { projects } from "@/lib/data";
 
 function WebPreview({ urls }: { urls: string[] }) {
@@ -41,6 +41,13 @@ function ImageSlot({
   variant?: "card" | "featured" | "wide";
 }) {
   const [active, setActive] = useState(0);
+  const [paused, setPaused] = useState(false);
+
+  useEffect(() => {
+    if (images.length <= 1 || paused) return;
+    const id = setInterval(() => setActive((a) => (a + 1) % images.length), 2000);
+    return () => clearInterval(id);
+  }, [images.length, paused]);
 
   if (video) {
     return (
@@ -76,7 +83,11 @@ function ImageSlot({
       : "w-full h-96 object-contain block bg-stone-50";
 
   return (
-    <div className="relative w-full overflow-hidden bg-stone-50 group">
+    <div
+      className="relative w-full overflow-hidden bg-stone-50 group"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={images[active]} alt={title} className={imgCls} />
       {images.length > 1 && (
